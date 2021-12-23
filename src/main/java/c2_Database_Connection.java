@@ -34,8 +34,8 @@ public class c2_Database_Connection {
         //System.out.println("Employee Email: "+resultSet2.getString("country_name"));
         resultSet2.next();
         while(resultSet2.next()){
-            System.out.println("Employee Name: "+resultset.getString("country_id"));
-            System.out.println("Employee Email: "+resultset.getString("country_name"));
+            System.out.println("Employee Name: "+resultSet2.getString("country_id"));
+            System.out.println("Employee Email: "+resultSet2.getString("country_name"));
         }
 
         resultSet2.close();
