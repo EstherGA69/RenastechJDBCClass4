@@ -20,10 +20,25 @@ public class c2_Database_Connection {
         resultset.next();
         System.out.println("First Employee name:"+resultset.getString("first_name"));
 
+        System.out.println("-------------- ResultSet1--------------");
         while(resultset.next()){
             System.out.println("Employee Name: "+resultset.getString("first_name"));
             System.out.println("Employee Email: "+resultset.getString("email"));
         }
+
+        // resultset2 can be created to execute other statement
+        ResultSet resultSet2=statement.executeQuery("SELECT * FROM countries");
+        //resultSet2.next();
+        //System.out.println("-------------- ResultSet2--------------");
+        //System.out.println("Employee Name: "+resultSet2.getString("country_id"));
+        //System.out.println("Employee Email: "+resultSet2.getString("country_name"));
+        resultSet2.next();
+        while(resultSet2.next()){
+            System.out.println("Employee Name: "+resultset.getString("country_id"));
+            System.out.println("Employee Email: "+resultset.getString("country_name"));
+        }
+
+        resultSet2.close();
         resultset.close();
         statement.close();
         connection.close();
