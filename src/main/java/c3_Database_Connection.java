@@ -52,6 +52,26 @@ public class c3_Database_Connection {
         resultSet.next();
         System.out.println("Second Country Name: "+resultSet.getString("country_name"));
 
+        // move the cursor to first row
+        resultSet.first();
+        // print first row columns
+        System.out.println("First Country Name: "+resultSet.getString("country_name"));
+
+        // cursor is before first row, we need tomove cursor next()
+        resultSet.beforeFirst();
+        // not print anything
+        //System.out.println("First Country Name: "+resultSet.getString("country_name"));
+
+        resultSet.next();
+        System.out.println("First Country Name: "+resultSet.getString("country_name"));
+
+        // cursor is after the last row of resultset hence need to do previo
+        resultSet.afterLast();
+        resultSet.previous();
+        System.out.println("Last Country Name: "+resultSet.getString("country_name"));
+        
+
+
         //close connection
         resultSet.close();
         statement.close();
