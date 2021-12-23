@@ -69,8 +69,11 @@ public class c3_Database_Connection {
         resultSet.afterLast();
         resultSet.previous();
         System.out.println("Last Country Name: "+resultSet.getString("country_name"));
-        
 
+        System.out.println("--------- Country name from last to first ---------");
+        while (resultSet.previous()){
+            System.out.println("Country Name: "+resultSet.getString("country_name"));
+        }
 
         //close connection
         resultSet.close();
