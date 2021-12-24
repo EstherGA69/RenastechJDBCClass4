@@ -3,6 +3,7 @@ package renastech.jdbc.day02;
 import renastech.jdbc.utils.DatabaseUtil;
 
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class c1_ResultsetMetaData {
@@ -17,6 +18,29 @@ public class c1_ResultsetMetaData {
         resultSet.next();
         //print the first name of employee
         System.out.println(resultSet.getString("first_name"));
+
+        // ResultSetMetaData provide insight of resultset
+        ResultSetMetaData rsmd = resultSet.getMetaData();
+
+        // getColumnCount will return the number of column in employee table
+        int columnCount = rsmd.getColumnCount();
+
+        //print columnCount
+        System.out.println("Number of Columns in table = "+columnCount);
+
+        // getColumnName will return the name of column at number 3 which is LAST_NAME
+        String columnName = rsmd.getColumnName(3);
+
+        // print name of column i.e. LAST_NAME
+        System.out.println("Column Name = "+columnName);
+
+        System.out.println("------------------- PRINT ALL COLUMN NAMES---------------------");
+
+        // print all the columns of a table
+        for (int i=1;i<columnCount;i++){
+            System.out.print(rsmd.getColumnName(i)+"\t");
+        }
+
     }
 
 }
