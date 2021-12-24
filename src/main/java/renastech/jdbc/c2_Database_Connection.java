@@ -1,3 +1,5 @@
+package renastech.jdbc;
+
 import java.sql.*;
 
 public class c2_Database_Connection {
