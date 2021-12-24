@@ -2,6 +2,7 @@ package renastech.jdbc.day02;
 
 import renastech.jdbc.utils.DatabaseUtil;
 
+import javax.xml.crypto.Data;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -40,6 +41,8 @@ public class c1_ResultsetMetaData {
         for (int i=1;i<columnCount;i++){
             System.out.print(rsmd.getColumnName(i)+"\t");
         }
+
+        DatabaseUtil.closeDatabase();
 
     }
 
