@@ -6,6 +6,8 @@ import javax.xml.crypto.Data;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class c1_ResultsetMetaData {
 
@@ -41,6 +43,16 @@ public class c1_ResultsetMetaData {
         for (int i=1;i<columnCount;i++){
             System.out.print(rsmd.getColumnName(i)+"\t");
         }
+        System.out.println("\n");
+        List<String> employeesColumnNames = new ArrayList<>();
+
+        System.out.println("------------------- PRINT ALL COLUMN NAMES FROM LIST ---------------------");
+
+        for(int i=1;i<columnCount;i++){
+            employeesColumnNames.add(rsmd.getColumnName(i));
+        }
+
+        System.out.println("Employee names in List = "+employeesColumnNames);
 
         DatabaseUtil.closeDatabase();
 
