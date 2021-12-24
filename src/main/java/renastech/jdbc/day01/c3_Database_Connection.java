@@ -1,4 +1,4 @@
-package renastech.jdbc;
+package renastech.jdbc.day01;
 
 import java.sql.*;
 

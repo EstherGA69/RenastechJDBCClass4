@@ -22,7 +22,7 @@ Java Database Connectivity
   JDBC has DriverManager class to manage connection according to
       the url, username , password
    url | connection string  (YOU WILL BE GIVE THIS INFORMATION)
-   jdbc:oracle:thin:@54.88.118.39:1521:XE
+   jdbc:oracle:thin:@ec2-3-91-68-37.compute-1.amazonaws.com:1521:XE
    "jdbc:oracle:thin:@IP_ADDRESS:1521:XE";
    jdbc  --  connection using java
    oracle -- database vendor , RDBMS
