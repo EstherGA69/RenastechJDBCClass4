@@ -40,7 +40,7 @@ public class c1_ResultsetMetaData {
         System.out.println("------------------- PRINT ALL COLUMN NAMES---------------------");
 
         // print all the columns of a table
-        for (int i=1;i<columnCount;i++){
+        for (int i=1;i<=columnCount;i++){
             System.out.print(rsmd.getColumnName(i)+"\t");
         }
         System.out.println("\n");
@@ -48,11 +48,13 @@ public class c1_ResultsetMetaData {
 
         System.out.println("------------------- PRINT ALL COLUMN NAMES FROM LIST ---------------------");
 
-        for(int i=1;i<columnCount;i++){
+        for(int i=1;i<=columnCount;i++){
             employeesColumnNames.add(rsmd.getColumnName(i));
         }
 
         System.out.println("Employee names in List = "+employeesColumnNames);
+
+        DatabaseUtil.getAllData();
 
         DatabaseUtil.closeDatabase();
 
