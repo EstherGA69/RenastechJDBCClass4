@@ -29,7 +29,7 @@ public class c1_Database_Connection {
         Statement statement = connection.createStatement();
 
         //Resultset will store the executeQuery result
-        ResultSet resultset= statement.executeQuery("SELECT * FROM countries");
+        ResultSet resultset = statement.executeQuery("SELECT * FROM countries");
 
         //System.out.println("First column value:"+resultset.getString(1));
         //System.out.println("First column value:"+resultset.getString("country_id"));
@@ -38,9 +38,9 @@ public class c1_Database_Connection {
         resultset.next();
 
         // print the 1st column of 1st row by index
-        System.out.println("First column value:"+resultset.getString(1));
+        System.out.println("First column value:" + resultset.getString(1));
         // print the 1st column of 1st row by column name
-        System.out.println("First column value:"+resultset.getString("country_name"));
+        System.out.println("First column value:" + resultset.getString("country_name"));
 
         // cursor will move to the 2nd row
         resultset.next();
@@ -49,8 +49,8 @@ public class c1_Database_Connection {
         //cursor will move to the 4th row
         resultset.next();
         // print the results of 4th row
-        System.out.println("First column value:"+resultset.getString(1));
-        System.out.println("First column value:"+resultset.getString("country_id"));
+        System.out.println("First column value:" + resultset.getString(1));
+        System.out.println("First column value:" + resultset.getString("country_id"));
 
         //close resultset
         resultset.close();

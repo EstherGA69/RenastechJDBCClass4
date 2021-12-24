@@ -29,30 +29,30 @@ public class c1_ResultsetMetaData {
         int columnCount = rsmd.getColumnCount();
 
         //print columnCount
-        System.out.println("Number of Columns in table = "+columnCount);
+        System.out.println("Number of Columns in table = " + columnCount);
 
         // getColumnName will return the name of column at number 3 which is LAST_NAME
         String columnName = rsmd.getColumnName(3);
 
         // print name of column i.e. LAST_NAME
-        System.out.println("Column Name = "+columnName);
+        System.out.println("Column Name = " + columnName);
 
         System.out.println("------------------- PRINT ALL COLUMN NAMES---------------------");
 
         // print all the columns of a table
-        for (int i=1;i<=columnCount;i++){
-            System.out.print(rsmd.getColumnName(i)+"\t");
+        for (int i = 1; i <= columnCount; i++) {
+            System.out.print(rsmd.getColumnName(i) + "\t");
         }
         System.out.println("\n");
         List<String> employeesColumnNames = new ArrayList<>();
 
         System.out.println("------------------- PRINT ALL COLUMN NAMES FROM LIST ---------------------");
 
-        for(int i=1;i<=columnCount;i++){
+        for (int i = 1; i <= columnCount; i++) {
             employeesColumnNames.add(rsmd.getColumnName(i));
         }
 
-        System.out.println("Employee names in List = "+employeesColumnNames);
+        System.out.println("Employee names in List = " + employeesColumnNames);
 
         DatabaseUtil.getAllData();
 

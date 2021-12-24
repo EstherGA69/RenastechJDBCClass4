@@ -14,7 +14,7 @@ public class c4_Database_Connection {
         Connection connection = DriverManager.getConnection(connectionUrl, userName, password);
 
         // create statements. TYPE_SCROLL_INSENSITIVE will make our cursor free
-        Statement statement= connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
         ResultSet resultSet = statement.executeQuery("SELECT * FROM countries");
 
@@ -34,7 +34,7 @@ public class c4_Database_Connection {
         // move cursor to specific row:15
         resultSet.absolute(15);
         // print the country name from 15th row i.e. Japan
-        System.out.println("Fifteenth row: "+ resultSet.getString("country_name"));
+        System.out.println("Fifteenth row: " + resultSet.getString("country_name"));
 
         //close connection
         resultSet.close();
